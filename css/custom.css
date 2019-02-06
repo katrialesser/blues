@@ -1,3 +1,6 @@
+
+/* colors */
+
 /*
 $teal: #28a288;
 $blue: #
@@ -9,6 +12,12 @@ $lightgray: #
 $xlightgray: #f2f2f2; 
 */
 
+
+
+/* fonts */
+
+/* general styles */
+
 .flag {
 /* stuff here */
 }
@@ -17,3 +26,22 @@ $xlightgray: #f2f2f2;
   background: #28a288;
 }
 
+/* Theme Overrides */
+
+.page-container-border-enabled .page-container {
+    /* border-color: #505050; */
+    border: none;
+}
+
+
+
+/* Color Coding Categories */
+
+
+
+
+
+/* Region Styling */
+
+
+/* Specific Page Styling */
