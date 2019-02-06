@@ -44,4 +44,13 @@ $xlightgray: #f2f2f2;
 /* Region Styling */
 
 
+
+/* ---- front page --- */
+
+
+.view-most-recent-post .views-field.views-field-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 /* Specific Page Styling */
