@@ -14,6 +14,10 @@ a {
   .button:hover {
     background: #6cbdc8; }
 
+.page-container-border-enabled .page-container {
+  /* border-color: #505050; */
+  border: none; }
+
 .flag {
   /* stuff here */ }
   .flag.teal, .flag.for-baby {
@@ -22,6 +26,11 @@ a {
     background: #28a288; }
   .flag.green, .flag.for-the-home {
     background: #28a288; }
+
+/* ---- front page --- */
+.view-most-recent-post .views-field.views-field-title {
+  font-weight: bold;
+  font-size: 20px; }
 
 p.text-align-center a {
   max-width: 400px;
