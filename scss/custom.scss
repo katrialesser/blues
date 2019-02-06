@@ -1,6 +1,6 @@
 
 $teal: #28a288;
-$blue: #000000;
+$blue: #6cbdc8;
 $green: #000000;
 
 $darkgray: #666;
@@ -9,11 +9,51 @@ $lightgray: #000000;
 $xlightgray: #f2f2f2; 
 
 
+// General info
+a {
+  color: $teal;
+  font-weight: bold;
+  &:hover {
+    color: $blue;
+  }
+}
+
+// common classes
+.bold {
+  font-weight: bold;
+}
+.button {
+  // make this look like the buttons in our mockup
+  background: $teal;
+  color: $darkgray;
+  padding: 8 20px;
+  &:hover {
+    background: $blue;
+  }
+}
+
+
+// general styling
+
 .flag {
 /* stuff here */
+  &.teal, &.for-baby {
+    background: #28a288;
+  }
+  &.blue, &.for-mom {
+    background: #28a288;
+  }
+  &.green, &.for-the-home {
+    background: #28a288;
+  }
 }
 
-.flag.teal {
-  background: #28a288;
-}
 
+
+// page content
+p.text-align-center a {
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

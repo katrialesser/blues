@@ -1,56 +1,32 @@
+a {
+  color: #28a288;
+  font-weight: bold; }
+  a:hover {
+    color: #6cbdc8; }
 
-/* colors */
+.bold {
+  font-weight: bold; }
 
-/*
-$teal: #28a288;
-$blue: #
-$green: #
-
-$darkgray: #666;
-$gray: #
-$lightgray: #
-$xlightgray: #f2f2f2; 
-*/
-
-
-
-/* fonts */
-
-/* general styles */
+.button {
+  background: #28a288;
+  color: #666;
+  padding: 8 20px; }
+  .button:hover {
+    background: #6cbdc8; }
 
 .flag {
-/* stuff here */
-}
+  /* stuff here */ }
+  .flag.teal, .flag.for-baby {
+    background: #28a288; }
+  .flag.blue, .flag.for-mom {
+    background: #28a288; }
+  .flag.green, .flag.for-the-home {
+    background: #28a288; }
 
-.flag.teal {
-  background: #28a288;
-}
+p.text-align-center a {
+  max-width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
-/* Theme Overrides */
-
-.page-container-border-enabled .page-container {
-    /* border-color: #505050; */
-    border: none;
-}
-
-
-
-/* Color Coding Categories */
-
-
-
-
-
-/* Region Styling */
-
-
-
-/* ---- front page --- */
-
-
-.view-most-recent-post .views-field.views-field-title {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-/* Specific Page Styling */
+/*# sourceMappingURL=custom.css.map */
