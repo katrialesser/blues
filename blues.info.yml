@@ -4,19 +4,8 @@ base theme: blues
 description: 'A blue-highlighted flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
 # core: 8.x
 libraries:
-  - blues/fontawesome
   - blues/global-styling
-  - blues/background-image-block
-  - blues/messages
-  - blues/smooth-scroll
-  - blues/local-stylesheets
 
-libraries-override:
-  classy/base:
-    css:
-      component:
-        css/components/breadcrumb.css: false
-        css/components/pager.css: false
 regions:
   slideout: 'Slideout'
   header_top_highlighted_first: 'Header Top Highlighted First'
@@ -57,4 +46,3 @@ regions:
   sub_footer_first: 'Subfooter First'
   footer: 'Subfooter Second'
 
-# Information added by Drupal.org packaging script on 2017-12-18
