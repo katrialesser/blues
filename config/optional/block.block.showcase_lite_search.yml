@@ -4,11 +4,11 @@ dependencies:
   module:
     - search
   theme:
-    - showcase_lite
+    - blues
 _core:
   default_config_hash: VStO8y6zdIUsByV5ILgeKmduBF0Rlfe0IiJqZeDu7hA
-id: showcase_lite_search
-theme: showcase_lite
+id: blues_search
+theme: blues
 region: sidebar_second
 weight: -6
 provider: null

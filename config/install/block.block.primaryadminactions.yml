@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - showcase_lite
+    - blues
 id: primaryadminactions
-theme: showcase_lite
+theme: blues
 region: content
 weight: -3
 provider: null

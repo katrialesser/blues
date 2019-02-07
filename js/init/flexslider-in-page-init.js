@@ -9,7 +9,7 @@
       $(context).find('.in-page-images-slider').once('mtflexsliderInPageSliderInit').each(function() {
         $(this).flexslider({
           useCSS: false,
-          animation: drupalSettings.showcase_lite.flexsliderInPageInit.inPageSliderEffect,
+          animation: drupalSettings.blues.flexsliderInPageInit.inPageSliderEffect,
           controlNav: false,
           directionNav: false,
           animationLoop: false,

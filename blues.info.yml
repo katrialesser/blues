@@ -1,15 +1,15 @@
 name: Blues
 type: theme
-base theme: showcase_lite
+base theme: blues
 description: 'A blue-highlighted flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
 # core: 8.x
 libraries:
-  - showcase_lite/fontawesome
-  - showcase_lite/global-styling
-  - showcase_lite/background-image-block
-  - showcase_lite/messages
-  - showcase_lite/smooth-scroll
-  - showcase_lite/local-stylesheets
+  - blues/fontawesome
+  - blues/global-styling
+  - blues/background-image-block
+  - blues/messages
+  - blues/smooth-scroll
+  - blues/local-stylesheets
 
 libraries-override:
   classy/base:

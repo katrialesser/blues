@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - showcase_lite
+    - blues
 id: useraccountmenu
-theme: showcase_lite
+theme: blues
 region: sidebar_second
 weight: -5
 provider: null

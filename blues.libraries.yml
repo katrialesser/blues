@@ -88,8 +88,8 @@ fixed-header:
   js:
     js/init/waypoints-fixed-header-init.js: {}
   dependencies:
-    - showcase_lite/waypoints
-    - showcase_lite/waypoints-sticky
+    - blues/waypoints
+    - blues/waypoints-sticky
 
 transparent-header:
   version: VERSION
@@ -114,7 +114,7 @@ animate-global:
     theme:
       css/theme/animations.css: { weight: 1 }
   dependencies:
-    - showcase_lite/animate
+    - blues/animate
 
 slideout:
   version: 0.1.12
@@ -134,7 +134,7 @@ slideout-init:
   js:
     js/init/slideout-init.js: {}
   dependencies:
-    - showcase_lite/slideout
+    - blues/slideout
 
 waypoints:
   version: 4.0.1
@@ -157,7 +157,7 @@ waypoints-animations-init:
   js:
     js/init/waypoints-animations-init.js: {}
   dependencies:
-    - showcase_lite/waypoints
+    - blues/waypoints
     - core/jquery.once
     - core/drupal
 
@@ -176,7 +176,7 @@ magnific-popup-field-image-init:
   js:
     js/init/magnific-popup-field-image-init.js: {}
   dependencies:
-    - showcase_lite/magnific-popup
+    - blues/magnific-popup
     - core/jquery.once
     - core/drupal
 
@@ -185,21 +185,21 @@ magnific-popup-field-member-photo-init:
   js:
     js/init/magnific-popup-field-member-photo-init.js: {}
   dependencies:
-    - showcase_lite/magnific-popup
+    - blues/magnific-popup
 
 magnific-popup-field-image-slider-init:
   version: VERSION
   js:
     js/init/magnific-popup-field-image-slider-init.js: {}
   dependencies:
-    - showcase_lite/magnific-popup
+    - blues/magnific-popup
 
 magnific-popup-field-video-init:
   version: VERSION
   js:
     js/init/magnific-popup-field-video-init.js: {}
   dependencies:
-    - showcase_lite/magnific-popup
+    - blues/magnific-popup
 
 flexslider:
   version: 2.6.1
@@ -217,7 +217,7 @@ flexslider-global:
     component:
       css/components/flexslider-global.css: {}
   dependencies:
-    - showcase_lite/flexslider
+    - blues/flexslider
 
 flexslider-in-page-init:
   version: VERSION
@@ -227,7 +227,7 @@ flexslider-in-page-init:
   js:
     js/init/flexslider-in-page-init.js: {}
   dependencies:
-    - showcase_lite/flexslider-global
+    - blues/flexslider-global
     - core/drupalSettings
     - core/jquery.once
     - core/drupal
@@ -240,7 +240,7 @@ flexslider-nodes-slideshow:
   js:
     js/init/flexslider-nodes-slideshow-init.js: {}
   dependencies:
-    - showcase_lite/flexslider-global
+    - blues/flexslider-global
 
 smooth-scroll:
   version: VERSION
@@ -267,7 +267,7 @@ tooltip:
   js:
     js/init/tooltip-init.js: {}
   dependencies:
-    - showcase_lite/bootstrap
+    - blues/bootstrap
     - core/jquery
 
 count-to:
@@ -282,8 +282,8 @@ count-to-init:
   js:
     js/init/count-to-init.js: {}
   dependencies:
-    - showcase_lite/count-to
-    - showcase_lite/waypoints
+    - blues/count-to
+    - blues/waypoints
     - core/jquery.once
     - core/drupal
 

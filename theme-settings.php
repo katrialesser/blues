@@ -1,8 +1,8 @@
 <?php
 
-function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
+function blues_form_system_theme_settings_alter(&$form, &$form_state) {
 
-  $form['#attached']['library'][] = 'showcase_lite/theme-settings';
+  $form['#attached']['library'][] = 'blues/theme-settings';
 
   $form['mtt_settings'] = array(
     '#type' => 'fieldset',
@@ -28,7 +28,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Breadcrumb separator'),
     '#description'   => t('Enter the class of the icon you want from the Font Awesome library e.g.: fa-angle-right. A list of the available classes is provided here: <a href="http://fortawesome.github.io/Font-Awesome/cheatsheet" target="_blank">http://fortawesome.github.io/Font-Awesome/cheatsheet</a>.'),
-    '#default_value' => theme_get_setting('breadcrumb_separator', 'showcase_lite'),
+    '#default_value' => theme_get_setting('breadcrumb_separator', 'blues'),
     '#size'          => 20,
     '#maxlength'     => 100,
   );
@@ -44,7 +44,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'checkbox',
     '#title' => t('Enable full-page body border'),
     '#description'   => t('Adds a body border around your page, right inside the browser window.'),
-    '#default_value' => theme_get_setting('page_container_border', 'showcase_lite'),
+    '#default_value' => theme_get_setting('page_container_border', 'blues'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -60,7 +60,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'checkbox',
     '#title' => t('Fixed Header'),
     '#description'   => t('Use the checkbox to apply fixed position to the header regions.'),
-    '#default_value' => theme_get_setting('fixed_header', 'showcase_lite'),
+    '#default_value' => theme_get_setting('fixed_header', 'blues'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -76,7 +76,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'checkbox',
     '#title' => t('Show scroll to top button'),
     '#description'   => t('Use the checkbox to enable or disable scroll-to-top button.'),
-    '#default_value' => theme_get_setting('scroll_to_top_display', 'showcase_lite'),
+    '#default_value' => theme_get_setting('scroll_to_top_display', 'blues'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
@@ -85,7 +85,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Scroll to top icon'),
     '#description'   => t('Enter the class of the icon you want from the Font Awesome library e.g.: fa-long-arrow-up. A list of the available classes is provided here: <a href="http://fortawesome.github.io/Font-Awesome/cheatsheet" target="_blank">http://fortawesome.github.io/Font-Awesome/cheatsheet</a>.'),
-    '#default_value' => theme_get_setting('scroll_to_top_icon','showcase_lite'),
+    '#default_value' => theme_get_setting('scroll_to_top_icon','blues'),
     '#size'          => 20,
     '#maxlength'     => 100,
   );
@@ -94,7 +94,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
     '#type' => 'select',
     '#title' => t('Region'),
     '#description'   => t('Select the region that you want the scroll-to-top button to be displayed in.'),
-    '#default_value' => theme_get_setting('scroll_to_top_region', 'showcase_lite'),
+    '#default_value' => theme_get_setting('scroll_to_top_region', 'blues'),
     '#options' => array(
     'footer-to-top-enabled' => t('Footer'),
     'footer-bottom-to-top-enabled' => t('Footer Bottom'),
@@ -113,8 +113,8 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
   $form['mtt_settings']['bootstrap_tab']['bootstrap']['bootstrap_remote_type'] = array(
     '#type' => 'select',
     '#title' => t('Select the remote type'),
-    '#description'   => t('From the drop down select box, select how to load the Bootstrap library. If you select "Local" make sure that you download and place Bootstrap folder into the root theme folder (showcase_lite/bootstrap).'),
-    '#default_value' => theme_get_setting('bootstrap_remote_type', 'showcase_lite'),
+    '#description'   => t('From the drop down select box, select how to load the Bootstrap library. If you select "Local" make sure that you download and place Bootstrap folder into the root theme folder (blues/bootstrap).'),
+    '#default_value' => theme_get_setting('bootstrap_remote_type', 'blues'),
     '#options' => array(
     'local' => t('Local / No remote'),
     'cdn' => t('CDN'),
@@ -135,7 +135,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-01-looknfeel.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-01-looknfeel.jpg" />
    </a></div> ',
   );
 
@@ -153,7 +153,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-02-region.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-02-region.jpg" />
    </a></div> ',
   );
 
@@ -171,7 +171,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-03-article.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-03-article.jpg" />
    </a></div> ',
   );
 
@@ -189,7 +189,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-04-layout.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-04-layout.jpg" />
    </a></div> ',
   );
 
@@ -207,7 +207,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-05-fonts.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-05-fonts.jpg" />
    </a></div> ',
   );
 
@@ -225,7 +225,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-06-slideshow.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-06-slideshow.jpg" />
    </a></div> ',
   );
 
@@ -243,7 +243,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-07-videobackground.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-07-videobackground.jpg" />
    </a></div> ',
   );
 
@@ -261,7 +261,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-08-isotope.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-08-isotope.jpg" />
    </a></div> ',
   );
 
@@ -279,7 +279,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Available in the Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium-09-googlemaps.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium-09-googlemaps.jpg" />
    </a></div> ',
   );
 
@@ -297,7 +297,7 @@ function showcase_lite_form_system_theme_settings_alter(&$form, &$form_state) {
    '<div class="theme-settings-title">'.t("Premium version of this theme").'</div>
    <div class="theme-settings-image-wrapper">
    <a href="http://morethanthemes.com/themes/showcaseplus?utm_source=showcase-lite-demo&utm_medium=theme-settings&utm_campaign=free-themes" target="_blank">
-   <img src="' . base_path() . drupal_get_path('theme', 'showcase_lite') . '/images/premium.jpg" />
+   <img src="' . base_path() . drupal_get_path('theme', 'blues') . '/images/premium.jpg" />
    </a></div> ',
   );
 

@@ -44,7 +44,7 @@
           {% endif %}
         {% if view_mode == "full" and mt_setting.reading_time %}
           <li class="inline-list__item">
-            {{ attach_library('showcase_lite/reading-time') }}
+            {{ attach_library('blues/reading-time') }}
             <span class="reading-time">
               <span class="text--dark">{% trans %}Time to read{% endtrans %}</span>
               {% if minutes < 1 %}
@@ -62,7 +62,7 @@
   {% endif %}
 {% endblock %}
 {% block content %}
-  {{ attach_library('showcase_lite/node-article') }}
+  {{ attach_library('blues/node-article') }}
   <div class="node__main-content-section">
     {{ content|without('comment') }}
   </div>

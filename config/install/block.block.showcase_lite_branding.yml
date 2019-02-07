@@ -4,11 +4,11 @@ dependencies:
   module:
     - system
   theme:
-    - showcase_lite
+    - blues
 _core:
   default_config_hash: mSM1HPxqcTV3eX1XbEgZdxS7s0glOCIO6h9yCRnW84Q
-id: showcase_lite_branding
-theme: showcase_lite
+id: blues_branding
+theme: blues
 region: header_first
 weight: 0
 provider: null

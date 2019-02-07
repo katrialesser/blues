@@ -13,13 +13,13 @@ use Drupal\Core\Template\Attribute;
  *
  * Adds body classes if certain regions have content.
  */
-function showcase_lite_preprocess_html(&$variables) {
+function blues_preprocess_html(&$variables) {
 
   $bootstrap_remote_type = theme_get_setting('bootstrap_remote_type');
   if ($bootstrap_remote_type == 'local') {
-    $variables['#attached']['library'][] = 'showcase_lite/bootstrap';
+    $variables['#attached']['library'][] = 'blues/bootstrap';
   } else {
-    $variables['#attached']['library'][] = 'showcase_lite/bootstrap-cdn';
+    $variables['#attached']['library'][] = 'blues/bootstrap-cdn';
   }
 
   // Add information about the number of sidebars.
@@ -38,7 +38,7 @@ function showcase_lite_preprocess_html(&$variables) {
     $variables['attributes']['class'][] = 'layout-no-sidebars';
   }
 
-  $color_scheme_library = 'showcase_lite/color-'.theme_get_setting('color_scheme');
+  $color_scheme_library = 'blues/color-'.theme_get_setting('color_scheme');
   $variables['#attached']['library'][] = $color_scheme_library;
 
   // Add class for layout mode on body tag.
@@ -65,10 +65,10 @@ function showcase_lite_preprocess_html(&$variables) {
   $slogan_font_id = substr($slogan_font_family, -2);
 
   //Generate the library strings
-  $headings_font_library = 'showcase_lite/fonts-id-'.$headings_font_id;
-  $paragraph_font_library = 'showcase_lite/fonts-id-'.$paragraph_font_id;
-  $sitename_font_library = 'showcase_lite/fonts-id-'.$sitename_font_id;
-  $slogan_font_library = 'showcase_lite/fonts-id-'.$slogan_font_id;
+  $headings_font_library = 'blues/fonts-id-'.$headings_font_id;
+  $paragraph_font_library = 'blues/fonts-id-'.$paragraph_font_id;
+  $sitename_font_library = 'blues/fonts-id-'.$sitename_font_id;
+  $slogan_font_library = 'blues/fonts-id-'.$slogan_font_id;
 
   //Font families with the following IDs are OS specific and should not load an external font
   //yf: @font-your-face, yf=fyf
@@ -91,23 +91,23 @@ function showcase_lite_preprocess_html(&$variables) {
     $variables['#attached']['library'][] = $slogan_font_library;
   }
 
-  $variables['#attached']['library'][] = 'showcase_lite/fonts-sourcecodepro';
+  $variables['#attached']['library'][] = 'blues/fonts-sourcecodepro';
 
   // Blockquote symbol
-  $variables['#attached']['library'][] = 'showcase_lite/fonts-pt-serif';
+  $variables['#attached']['library'][] = 'blues/fonts-pt-serif';
 
   // Load libraries for Animations
   $animations_state = theme_get_setting('animations_state');
   if ($animations_state) {
-    $variables['#attached']['library'][] = 'showcase_lite/animate-global';
-    $variables['#attached']['library'][] = 'showcase_lite/waypoints-animations-init';
+    $variables['#attached']['library'][] = 'blues/animate-global';
+    $variables['#attached']['library'][] = 'blues/waypoints-animations-init';
   }
 
   //Load fixed-header library
   $fixed_header = theme_get_setting('fixed_header');
   if ($fixed_header) {
     $variables['attributes']['class'][] = 'fixed-header-enabled';
-    $variables['#attached']['library'][] = 'showcase_lite/fixed-header';
+    $variables['#attached']['library'][] = 'blues/fixed-header';
   }
 
   //Load page-container-border
@@ -124,7 +124,7 @@ function showcase_lite_preprocess_html(&$variables) {
 
   //Load video background
   if ($video_bg_state == "video" && (!empty($variables['page']['media_background_first']) || !empty($variables['page']['media_background_second']))) {
-    $variables['#attached']['library'][] = 'showcase_lite/video-background-init';
+    $variables['#attached']['library'][] = 'blues/video-background-init';
   }
 
   //Load transparent-header library
@@ -134,7 +134,7 @@ function showcase_lite_preprocess_html(&$variables) {
   }
 }
 
-function showcase_lite_preprocess_breadcrumb(&$variables){
+function blues_preprocess_breadcrumb(&$variables){
   $variables['mt_setting']['breadcrumb_separator'] = theme_get_setting('breadcrumb_separator');
 
   if($variables['breadcrumb']){
@@ -154,7 +154,7 @@ function showcase_lite_preprocess_breadcrumb(&$variables){
 /**
  * Implements hook_preprocess_HOOK() for page templates.
  */
-function showcase_lite_preprocess_page_title(&$variables) {
+function blues_preprocess_page_title(&$variables) {
   // Since the title and the shortcut link are both block level elements,
   // positioning them next to each other is much simpler with a wrapper div.
   if (!empty($variables['title_suffix']['add_or_remove_shortcut']) && $variables['title']) {
@@ -173,7 +173,7 @@ function showcase_lite_preprocess_page_title(&$variables) {
   }
 }
 
-function showcase_lite_preprocess_page(&$variables) {
+function blues_preprocess_page(&$variables) {
 
   $slideout = $variables['page']['slideout'];
   $sidebar_first = $variables['page']['sidebar_first'];
@@ -194,7 +194,7 @@ function showcase_lite_preprocess_page(&$variables) {
 
   // Attach library to slideout region
   if ($slideout) {
-    $variables['#attached']['library'][] = 'showcase_lite/slideout-init';
+    $variables['#attached']['library'][] = 'blues/slideout-init';
   }
 
   // Insert variables into the page template.
@@ -651,7 +651,7 @@ function showcase_lite_preprocess_page(&$variables) {
   $variables['scroll_to_top_display'] = theme_get_setting('scroll_to_top_display');
   $variables['scroll_to_top_region'] = theme_get_setting('scroll_to_top_region');
   if ($variables['scroll_to_top_display']) {
-    $variables['#attached']['library'][] = 'showcase_lite/to-top';
+    $variables['#attached']['library'][] = 'blues/to-top';
     $variables['scroll_to_top_icon'] = theme_get_setting('scroll_to_top_icon');
   }
 
@@ -663,35 +663,35 @@ function showcase_lite_preprocess_page(&$variables) {
   $node = Drupal::request()->attributes->get('node');
   if ($variables['post_progress'] && $variables['fixed_header'] && $node && ($node->getType() == 'article')) {
     $variables['post_progress_status'] = "enabled";
-    $variables['#attached']['library'][] = 'showcase_lite/post-progress';
+    $variables['#attached']['library'][] = 'blues/post-progress';
   } else {
     $variables['post_progress_status'] = "disabled";
   }
 }
 
 
-function showcase_lite_page_attachments_alter(&$page) {
+function blues_page_attachments_alter(&$page) {
 
   //In page slider
   $in_page_slider_effect = theme_get_setting('in_page_slider_effect');
 
-  $page['#attached']['drupalSettings']['showcase_lite']['flexsliderInPageInit']['inPageSliderEffect'] = $in_page_slider_effect;
+  $page['#attached']['drupalSettings']['blues']['flexsliderInPageInit']['inPageSliderEffect'] = $in_page_slider_effect;
 
   // Slideout
   $slideout_side = theme_get_setting('slideout_side');
   $slideout_touch_swipe = theme_get_setting('slideout_touch_swipe');
-  $page['#attached']['drupalSettings']['showcase_lite']['slideoutInit']['slideoutSide'] = $slideout_side;
+  $page['#attached']['drupalSettings']['blues']['slideoutInit']['slideoutSide'] = $slideout_side;
   if ($slideout_touch_swipe) {
-    $page['#attached']['drupalSettings']['showcase_lite']['slideoutInit']['slideoutTouchSwipe'] = true;
+    $page['#attached']['drupalSettings']['blues']['slideoutInit']['slideoutTouchSwipe'] = true;
   } else {
-    $page['#attached']['drupalSettings']['showcase_lite']['slideoutInit']['slideoutTouchSwipe'] = false;
+    $page['#attached']['drupalSettings']['blues']['slideoutInit']['slideoutTouchSwipe'] = false;
   }
 }
 
 /**
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
-function showcase_lite_preprocess_node(&$variables) {
+function blues_preprocess_node(&$variables) {
   // Remove the "Add new comment" link on teasers or when the comment form is
   // displayed on the page.
   if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
@@ -709,7 +709,7 @@ function showcase_lite_preprocess_node(&$variables) {
 
 }
 
-function showcase_lite_preprocess_node__article(&$variables) {
+function blues_preprocess_node__article(&$variables) {
   $variables['mt_setting']['reading_time'] = theme_get_setting('reading_time');
 
   // Count the words of article in order to calculate the reading time
@@ -727,7 +727,7 @@ function showcase_lite_preprocess_node__article(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for block.html.twig.
  */
-function showcase_lite_preprocess_block(&$variables) {
+function blues_preprocess_block(&$variables) {
   // Add a clearfix class to blocks.
   $variables['attributes']['class'][] = 'clearfix';
 }
@@ -735,28 +735,28 @@ function showcase_lite_preprocess_block(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for pager.html.twig.
  */
-function showcase_lite_preprocess_pager(&$variables) {
-  $variables['#attached']['library'][] = 'showcase_lite/pager';
+function blues_preprocess_pager(&$variables) {
+  $variables['#attached']['library'][] = 'blues/pager';
 }
 
 /**
  * Implements hook_preprocess_HOOK() for views-mini-pager.html.twig.
  */
-function showcase_lite_preprocess_views_mini_pager(&$variables) {
-  $variables['#attached']['library'][] = 'showcase_lite/mini-pager';
+function blues_preprocess_views_mini_pager(&$variables) {
+  $variables['#attached']['library'][] = 'blues/mini-pager';
 }
 
 /**
  * Implements hook_preprocess_HOOK() for menu.html.twig.
  */
-function showcase_lite_preprocess_menu(&$variables) {
+function blues_preprocess_menu(&$variables) {
   $variables['attributes']['class'][] = 'clearfix';
 }
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
-function showcase_lite_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+function blues_theme_suggestions_form_alter(array &$suggestions, array $variables) {
   if ($variables['element']['#form_id'] == 'search_block_form') {
     $suggestions[] = 'form__search_block_form';
   }
@@ -765,7 +765,7 @@ function showcase_lite_theme_suggestions_form_alter(array &$suggestions, array $
 /**
  * Implements hook_form_alter() to add classes to the search form.
  */
-function showcase_lite_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function blues_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if (in_array($form_id, ['search_block_form', 'search_form'])) {
     $key = ($form_id == 'search_block_form') ? 'actions' : 'basic';
     if (!isset($form[$key]['submit']['#attributes'])) {
@@ -776,16 +776,16 @@ function showcase_lite_form_alter(&$form, FormStateInterface $form_state, $form_
   }
 }
 
-function showcase_lite_preprocess_field(&$variables) {
+function blues_preprocess_field(&$variables) {
   $element = $variables['element'];
   $variables['view_mode'] = $element['#view_mode']; //Expose node view_mode to field templates
 }
 
-function showcase_lite_preprocess_field__entity_reference(&$variables) {
+function blues_preprocess_field__entity_reference(&$variables) {
   $variables['entity_reference_target_type'] = $variables['element']['#items']->getItemDefinition()->getSetting('target_type');
 }
 
-function showcase_lite_theme_suggestions_image_formatter_alter(array &$suggestions, array $variables) {
+function blues_theme_suggestions_image_formatter_alter(array &$suggestions, array $variables) {
   $entity = $variables['item']->getEntity();
   $field_name = $variables['item']->getParent()->getName();
   if (isset($entity) && isset($field_name)) {

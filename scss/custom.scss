@@ -37,20 +37,33 @@ a {
 .page-container-border-enabled .page-container {
   /* border-color: #505050; */
   border: none;
+
 }
+
+.clearfix.main-content__container > .row > section.col-md-8 {
+  border-right: 1px solid gray;
+    // need to look at widths Katria at different sizes 
+  // or change the md- and lg- numbers etc
+  width: 63%;
+}
+.clearfix.main-content__container > .row > aside.col-md-4 {
+  // need to look at widths Katria at different sizes 
+  // or change the md- and lg- numbers etc
+}
+
 
 // general styling
 
 .flag {
 /* stuff here */
   &.teal, &.for-baby {
-    background: #28a288;
+    background: $teal;
   }
   &.blue, &.for-mom {
-    background: #28a288;
+    background: $blue;
   }
   &.green, &.for-the-home {
-    background: #28a288;
+    background: $green;
   }
 }
 

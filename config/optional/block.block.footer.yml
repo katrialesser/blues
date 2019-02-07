@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - showcase_lite
+    - blues
 id: footer
-theme: showcase_lite
+theme: blues
 region: sub_footer_first
 weight: 0
 provider: null

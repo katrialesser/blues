@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - showcase_lite
+    - blues
 _core:
   default_config_hash: Iz_fLkfuz8gDX4VAc9SiT-GhCrvai8vzqcFo1RPzqIU
-id: showcase_lite_page_title
-theme: showcase_lite
+id: blues_page_title
+theme: blues
 region: content
 weight: -4
 provider: null
