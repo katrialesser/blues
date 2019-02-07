@@ -8,6 +8,33 @@ $gray: #000000;
 $lightgray: #000000;
 $xlightgray: #f2f2f2; 
 
+// fonts & headings
+$logofont: 'Kaushan Script', cursive;
+$plainfont: 'Open Sans', sans-serif;
+// main font 
+
+h1 {
+  font-family: $plainfont;
+  font-size: 40px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 600;
+}
+h2 {
+  font-family: $plainfont;
+  font-size: 30px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: $plainfont;
+  font-size: 25px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 600;
+}
 
 // General info
 a {
@@ -17,6 +44,7 @@ a {
     color: $blue;
   }
 }
+
 
 // common classes
 .bold {
@@ -40,29 +68,36 @@ a {
 
 }
 
-.clearfix.main-content__container > .row > section.col-md-8 {
+.clearfix.main-content__container > .row { 
+  & > section.col-md-8 {
   border-right: 1px solid gray;
     // need to look at widths Katria at different sizes 
   // or change the md- and lg- numbers etc
   width: 63%;
-}
-.clearfix.main-content__container > .row > aside.col-md-4 {
-  // need to look at widths Katria at different sizes 
-  // or change the md- and lg- numbers etc
+  }
+  & > aside.col-md-4 {
+    // need to look at widths Katria at different sizes 
+    // or change the md- and lg- numbers etc
+  }
 }
 
 
 // general styling
 
 .flag {
-/* stuff here */
-  &.teal, &.for-baby {
+    padding: 4px 15px;
+    position: relative;
+    width: fit-content;
+    top: 50px;
+    left: -15px;
+
+  &.teal, &.for.baby {
     background: $teal;
   }
-  &.blue, &.for-mom {
+  &.blue, &.For.Mom {
     background: $blue;
   }
-  &.green, &.for-the-home {
+  &.green, &.for.the.home {
     background: $green;
   }
 }

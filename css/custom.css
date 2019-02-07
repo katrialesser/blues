@@ -1,3 +1,24 @@
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 600; }
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 600; }
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 600; }
+
 a {
   color: #28a288;
   font-weight: bold; }
@@ -18,14 +39,22 @@ a {
   /* border-color: #505050; */
   border: none; }
 
+.clearfix.main-content__container > .row > section.col-md-8 {
+  border-right: 1px solid gray;
+  width: 63%; }
+
 .flag {
-  /* stuff here */ }
-  .flag.teal, .flag.for-baby {
+  padding: 4px 15px;
+  position: relative;
+  width: fit-content;
+  top: 50px;
+  left: -15px; }
+  .flag.teal, .flag.for.baby {
     background: #28a288; }
-  .flag.blue, .flag.for-mom {
-    background: #28a288; }
-  .flag.green, .flag.for-the-home {
-    background: #28a288; }
+  .flag.blue, .flag.For.Mom {
+    background: #6cbdc8; }
+  .flag.green, .flag.for.the.home {
+    background: #000000; }
 
 /* ---- front page --- */
 .view-most-recent-post .views-field.views-field-title {
